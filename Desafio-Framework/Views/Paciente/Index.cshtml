@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Desafio_Framework.Models.PacienteViewModel>
+@using Desafio_Framework.Models
+@using Desafio_Framework.Code
+
+<div class="top-buffer"></div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-head">Pacientes</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="createEditPacienteModal" data-toggle="modal" asp-action="AddEditPaciente" data-target="#modal-action-paciente" class="btn btn-primary">
+                <i class="glyphicon glyphicon-plus"></i>  Add Paciente
+            </a>
+        </div>
+        <div class="top-buffer"></div>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Pais</th>
+                    <th>Estado</th>
+                    <th>Cidade</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Pais)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Estado)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cidade)</td>
+                        <td>
+                            <a id="editPacienteModal" data-toggle="modal" asp-action="AddEditPaciente" asp-route-id="@item.Id" data-target="#modal-action-paciente"
+                               class="btn btn-info">
+                                <i class="glyphicon glyphicon-pencil"></i>  Edit
+                            </a>
+                            <a id="deletePacienteModal" data-toggle="modal" asp-action="DeletePaciente" asp-route-id="@item.Id" data-target="#modal-action-paciente" class="btn btn-danger">
+                                <i class="glyphicon glyphicon-trash"></i>  Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@Html.PartialAsync("_Modal", new BootstrapModel { ID = "modal-action-paciente", AreaLabeledId = "modal-action-paciente-label", Size = ModalSize.Medium })
+@section scripts
+{
+    <script src="~/js/paciente-index.js" asp-append-version="true"></script>
+}
