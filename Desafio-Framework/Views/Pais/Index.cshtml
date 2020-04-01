@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Desafio_Framework.Models.PaisViewModel>
+@using Desafio_Framework.Models
+@using Desafio_Framework.Code
+
+<div class="top-buffer"></div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-head">Pais</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="createEditPaisModal" data-toggle="modal" asp-action="AddEditPais" data-target="#modal-action-pais" class="btn btn-primary">
+                <i class="glyphicon glyphicon-plus"></i>  Add Pais
+            </a>
+        </div>
+        <div class="top-buffer"></div>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Descricao</th>
+                    <th>Editar</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                        
+                        <td>
+                            <a id="editPaisModal" data-toggle="modal" asp-action="AddEditPais" asp-route-id="@item.Id" data-target="#modal-action-pais"
+                               class="btn btn-info">
+                                <i class="glyphicon glyphicon-pencil"></i>  Edit
+                            </a>
+                            <a id="deletePaisModal" data-toggle="modal" asp-action="DeletePais" asp-route-id="@item.Id" data-target="#modal-action-pais" class="btn btn-danger">
+                                <i class="glyphicon glyphicon-trash"></i>  Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@Html.PartialAsync("_Modal", new BootstrapModel { ID = "modal-action-pais", AreaLabeledId = "modal-action-pais-label", Size = ModalSize.Medium })
+@section scripts
+{
+    <script src="~/js/pais-index.js" asp-append-version="true"></script>
+}

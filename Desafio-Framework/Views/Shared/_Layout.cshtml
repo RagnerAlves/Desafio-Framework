@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CRUD Application</title>
+    <title>@ViewData["Title"] - Desafio Framework</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,12 +26,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">CRUD Application</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Desafio Framework</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Paciente" asp-action="Index">Paciente</a></li>
+                    <li><a asp-area="" asp-controller="Pais" asp-action="Index">Pais</a></li>
+                    <li><a asp-area="" asp-controller="Estado" asp-action="Index">Estado</a></li>
+                    <li><a asp-area="" asp-controller="Cidade" asp-action="Index">Cidade</a></li>
                 </ul>
             </div>
         </div>
@@ -40,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2017 - Desafio_Framework</p>
+            <p>&copy; 2020 - Desafio_Framework</p>
         </footer>
     </div>
 

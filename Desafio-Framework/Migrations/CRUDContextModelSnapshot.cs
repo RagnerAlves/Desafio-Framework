@@ -16,29 +16,64 @@ namespace Desafio_Framework.Migrations
                 .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Desafio_Framework.DbEntities.Cidade", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<string>("Estado");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cidade");
+                });
+
+            modelBuilder.Entity("Desafio_Framework.DbEntities.Estado", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<string>("Pais");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Estado");
+                });
+
             modelBuilder.Entity("Desafio_Framework.DbEntities.Paciente", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("CPF")
-                        .IsRequired();
+                    b.Property<string>("CPF");
 
-                    b.Property<string>("Cidade")
-                        .IsRequired();
+                    b.Property<string>("Cidade");
 
-                    b.Property<string>("Estado")
-                        .IsRequired();
+                    b.Property<string>("Estado");
 
-                    b.Property<string>("Nome")
-                        .IsRequired();
+                    b.Property<string>("Nome");
 
-                    b.Property<string>("Pais")
-                        .IsRequired();
+                    b.Property<string>("Pais");
 
                     b.HasKey("Id");
 
                     b.ToTable("Paciente");
+                });
+
+            modelBuilder.Entity("Desafio_Framework.DbEntities.Pais", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Descricao");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Pais");
                 });
 #pragma warning restore 612, 618
         }

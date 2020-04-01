@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Desafio_Framework.Models.EstadoViewModel>
+@using Desafio_Framework.Models
+@using Desafio_Framework.Code
+
+<div class="top-buffer"></div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-head">Estado</div>
+    <div class="panel-body">
+        <div class="btn-group">
+            <a id="createEditEstadoModal" data-toggle="modal" asp-action="AddEditEstado" data-target="#modal-action-estado" class="btn btn-primary">
+                <i class="glyphicon glyphicon-plus"></i>  Add Estado
+            </a>
+        </div>
+        <div class="top-buffer"></div>
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Descricao</th>
+                    <th>Pais</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Descricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Pais)</td>
+
+                    <td>
+                        <a id="editEstadoModal" data-toggle="modal" asp-action="AddEditEstado" asp-route-id="@item.Id" data-target="#modal-action-estado"
+                           class="btn btn-info">
+                            <i class="glyphicon glyphicon-pencil"></i>  Edit
+                        </a>
+                        <a id="deleteEstadoModal" data-toggle="modal" asp-action="DeleteEstado" asp-route-id="@item.Id" data-target="#modal-action-estado" class="btn btn-danger">
+                            <i class="glyphicon glyphicon-trash"></i>  Delete
+                        </a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@Html.PartialAsync("_Modal", new BootstrapModel { ID = "modal-action-estado", AreaLabeledId = "modal-action-estado-label", Size = ModalSize.Medium })
+@section scripts
+{
+    <script src="~/js/estado-index.js" asp-append-version="true"></script>
+}

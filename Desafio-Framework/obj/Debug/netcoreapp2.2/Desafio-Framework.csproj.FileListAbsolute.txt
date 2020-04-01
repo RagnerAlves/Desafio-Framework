@@ -74,3 +74,13 @@ C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\n
 C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Paciente\_DeletePaciente.cshtml.g.cs
 C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Desafio-Framework.csproj.CoreCompileInputs.cache
 C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Paciente\Index.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\bin\Debug\netcoreapp2.2\bundleconfig.json
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Cidade\Index.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Cidade\_AddEditCidade.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Cidade\_DeleteCidade.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Estado\Index.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Estado\_AddEditEstado.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Estado\_DeleteEstado.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Pais\Index.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Pais\_AddEditPais.cshtml.g.cs
+C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\obj\Debug\netcoreapp2.2\Razor\Views\Pais\_DeletePais.cshtml.g.cs

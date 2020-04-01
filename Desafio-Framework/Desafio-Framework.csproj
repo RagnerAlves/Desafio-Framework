@@ -6,6 +6,15 @@
     <RootNamespace>Desafio_Framework</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove=".bowerrc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include=".bowerrc" />
+    <Content Include="Desafio_Framework.csproj" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />

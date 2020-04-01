@@ -14,17 +14,22 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #line 1 "C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\Views\_ViewImports.cshtml"
-using Desafio_Framework;
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
 #line 2 "C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\Views\_ViewImports.cshtml"
+using Desafio_Framework;
+
+#line default
+#line hidden
+#line 3 "C:\Users\Ragner\Documents\GitHub\Desafio-Framework\Desafio-Framework\Views\_ViewImports.cshtml"
 using Desafio_Framework.Models;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0fa09b08e99286f7035f39f223aafaca6b7f980c", @"/Views/Shared/_Modal.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5a38c4a4ca8e273c16f0e2ba314261e5af0bf1c0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"076f953dcd9214840cc2f7ea9bb5e459efbd6222", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__Modal : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Desafio_Framework.Models.BootstrapModel>
     {
         #pragma warning disable 1998

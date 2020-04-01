@@ -1,0 +1,13 @@
+﻿@model String
+@using Desafio_Framework.Models
+
+@using (Html.BeginForm())
+{
+    @Html.PartialAsync("_ModalHeader", new ModalHeader { Heading = "Delete Pais" })
+
+    <div class="modal-body form-horizontal">
+        Are you want to delete @Model?
+    </div>
+        @Html.PartialAsync("_ModalFooter", new ModalFooter { SubmitButtonText="Delete"})
+}
+

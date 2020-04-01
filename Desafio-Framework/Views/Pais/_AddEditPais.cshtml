@@ -1,0 +1,19 @@
+﻿@model Desafio_Framework.Models.PaisViewModel
+@using Desafio_Framework.Models
+
+
+<form asp-action="AddEditPais" role="form">
+    @await Html.PartialAsync("_ModalHeader", new ModalHeader { Heading = String.Format("{0} Pais", @Model.Id == 0 ? "Add" : "Edit") })
+   
+    <div class="modal-body form-horizontal">
+        <div class="form-group">
+            <label asp-for="Descricao" class="col-lg-3 col-sm-3 control-label"></label>
+            <div class="col-lg-6">
+                <input asp-for="Descricao" class="form-control" />
+            </div>
+        </div>        
+    </div>
+  @await Html.PartialAsync("_ModalFooter", new ModalFooter { })
+</form>
+
+
